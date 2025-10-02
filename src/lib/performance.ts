@@ -47,10 +47,10 @@ export const performance = {
   bundle: {
     // Dynamic imports for code splitting
     dynamic: {
-      // Lazy load heavy components
-      heavyComponent: () => import('@/components/HeavyComponent'),
-      chart: () => import('@/components/Chart'),
-      map: () => import('@/components/Map')
+      // Lazy load heavy components (examples - replace with actual components)
+      // heavyComponent: () => import('@/components/HeavyComponent'),
+      // chart: () => import('@/components/Chart'),
+      // map: () => import('@/components/Map')
     },
     
     // Preload critical resources
@@ -170,7 +170,7 @@ export const monitoring = {
 // Performance optimization helpers
 export const helpers = {
   // Debounce function for performance
-  debounce: <T extends (...args: any[]) => any>(
+  debounce: <T extends (...args: unknown[]) => unknown>(
     func: T,
     wait: number
   ): ((...args: Parameters<T>) => void) => {
@@ -182,7 +182,7 @@ export const helpers = {
   },
   
   // Throttle function for performance
-  throttle: <T extends (...args: any[]) => any>(
+  throttle: <T extends (...args: unknown[]) => unknown>(
     func: T,
     limit: number
   ): ((...args: Parameters<T>) => void) => {

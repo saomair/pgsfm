@@ -11,9 +11,16 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           {/* Company Information */}
           <div className="space-y-4">
-            <h2 className="text-2xl font-bold text-white">
-              PGS FM Ltd
-            </h2>
+            <div className="flex items-center">
+              <div className="relative w-16 h-16">
+                <Image
+                  src="/pgsfm-logo.jpg"
+                  alt="PGS FM Ltd Logo"
+                  fill
+                  className="object-contain"
+                />
+              </div>
+            </div>
             <p className="text-gray-300 text-sm leading-relaxed">
               Providing top-notch security and facilities management services across the UK. 
               Professional, reliable, and comprehensive solutions for all sectors.

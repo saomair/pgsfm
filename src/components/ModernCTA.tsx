@@ -1,8 +1,7 @@
 'use client';
 
 import { ReactNode } from 'react';
-import Image from 'next/image';
-import { getImageUrl } from '@/lib/imagePresets';
+import { getImageUrl, getBackgroundColor } from '@/lib/imagePresets';
 import ModernButton from './ModernButton';
 
 interface ModernCTAProps {
@@ -26,17 +25,13 @@ export default function ModernCTA({
   secondaryCtaHref,
   className = ""
 }: ModernCTAProps) {
+  const backgroundColor = getBackgroundColor('banner', imageText);
+  
   return (
-    <div className={`py-20 bg-gradient-to-r from-green-600 via-green-700 to-green-800 relative overflow-hidden ${className}`}>
-      {/* CTA Background Image */}
+    <div className={`py-20 ${backgroundColor} relative overflow-hidden ${className}`}>
+      {/* CTA Background */}
       <div className="absolute inset-0">
-        <Image
-          src={getImageUrl('banner', imageText)}
-          alt={imageText}
-          fill
-          className="object-cover opacity-20"
-        />
-        <div className="absolute inset-0 bg-gradient-to-r from-green-600/90 via-green-700/90 to-green-800/90"></div>
+        <div className="absolute inset-0 bg-black/20"></div>
       </div>
       
       <div className="absolute inset-0 opacity-20">

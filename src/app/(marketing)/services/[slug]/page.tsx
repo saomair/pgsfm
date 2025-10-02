@@ -3,7 +3,7 @@ import { services } from '@/lib/data';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import Image from 'next/image';
-import { getImageUrl } from '@/lib/imagePresets';
+import { getImageUrl, getBackgroundColor } from '@/lib/imagePresets';
 import { CheckCircle, ArrowLeft, Star, ArrowRight } from 'lucide-react';
 
 interface ServicePageProps {
@@ -45,17 +45,10 @@ export default async function ServicePage({ params }: ServicePageProps) {
   return (
     <>
       {/* Hero Section */}
-      <div className="relative bg-gradient-to-br from-slate-900 via-green-900 to-slate-800 overflow-hidden">
-        {/* Hero Background Image */}
+      <div className={`relative ${getBackgroundColor('hero', service.title)} overflow-hidden`}>
+        {/* Hero Background */}
         <div className="absolute inset-0">
-          <Image
-            src={getImageUrl('hero', service.title)}
-            alt={`${service.title} service`}
-            fill
-            priority
-            className="object-cover opacity-30"
-          />
-          <div className="absolute inset-0 bg-gradient-to-br from-slate-900/80 via-green-900/80 to-slate-800/80"></div>
+          <div className="absolute inset-0 bg-black/20"></div>
         </div>
         
         {/* Background Pattern */}
@@ -130,14 +123,7 @@ export default async function ServicePage({ params }: ServicePageProps) {
             </div>
             
             <div className="relative group">
-              <div className="relative rounded-2xl overflow-hidden shadow-2xl group-hover:shadow-3xl transition-all duration-300">
-                <Image
-                  src={getImageUrl('banner', service.title)}
-                  alt={`${service.title} service`}
-                  width={600}
-                  height={400}
-                  className="w-full h-[500px] object-cover group-hover:scale-105 transition-transform duration-300"
-                />
+              <div className={`relative rounded-2xl overflow-hidden shadow-2xl group-hover:shadow-3xl transition-all duration-300 w-full h-[500px] ${getBackgroundColor('banner', service.title)}`}>
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
               </div>
             </div>

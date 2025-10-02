@@ -8,23 +8,16 @@ import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Shield, Users, Clock, Award, ArrowRight, CheckCircle, Star, Building } from 'lucide-react';
-import { getImageUrl } from '@/lib/imagePresets';
+import { getImageUrl, getBackgroundColor } from '@/lib/imagePresets';
 
 export default function HomePage() {
   return (
     <>
       {/* Hero Section */}
-      <div className="relative bg-gradient-to-br from-slate-900 via-green-900 to-slate-800 overflow-hidden">
-        {/* Hero Background Image */}
+      <div className={`relative ${getBackgroundColor('hero', 'Professional Security Team')} overflow-hidden`}>
+        {/* Hero Background */}
         <div className="absolute inset-0">
-        <Image
-            src={getImageUrl('hero', 'Professional Security Team')}
-            alt="Professional Security Team"
-            fill
-          priority
-            className="object-cover opacity-30"
-          />
-          <div className="absolute inset-0 bg-gradient-to-br from-slate-900/80 via-green-900/80 to-slate-800/80"></div>
+          <div className="absolute inset-0 bg-black/20"></div>
         </div>
         
         {/* Background Pattern */}
@@ -223,64 +216,32 @@ export default function HomePage() {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="group text-center p-8 rounded-2xl bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20 transition-all duration-300 hover:-translate-y-2">
-              <div className="relative w-20 h-20 mx-auto mb-6 rounded-2xl overflow-hidden">
-                <Image
-                  src={getImageUrl('team', 'Security Professional')}
-                  alt="Security Professional"
-                  fill
-                  className="object-cover group-hover:scale-110 transition-transform duration-300"
-                />
-                <div className="absolute inset-0 bg-gradient-to-br from-green-500/80 to-green-600/80 flex items-center justify-center">
-                  <Shield className="w-10 h-10 text-white" />
-                </div>
+              <div className="relative w-20 h-20 mx-auto mb-6 rounded-2xl overflow-hidden bg-gradient-to-br from-green-500/80 to-green-600/80 flex items-center justify-center">
+                <Shield className="w-10 h-10 text-white" />
               </div>
               <h3 className="text-2xl font-bold text-white mb-4">Professional Security</h3>
               <p className="text-slate-300 leading-relaxed">Trained and licensed security professionals ensuring your safety and protection with the highest standards.</p>
             </div>
             
             <div className="group text-center p-8 rounded-2xl bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20 transition-all duration-300 hover:-translate-y-2">
-              <div className="relative w-20 h-20 mx-auto mb-6 rounded-2xl overflow-hidden">
-                <Image
-                  src={getImageUrl('team', 'Expert Team')}
-                  alt="Expert Team"
-                  fill
-                  className="object-cover group-hover:scale-110 transition-transform duration-300"
-                />
-                <div className="absolute inset-0 bg-gradient-to-br from-green-500/80 to-green-600/80 flex items-center justify-center">
-                  <Users className="w-10 h-10 text-white" />
-                </div>
+              <div className="relative w-20 h-20 mx-auto mb-6 rounded-2xl overflow-hidden bg-gradient-to-br from-green-500/80 to-green-600/80 flex items-center justify-center">
+                <Users className="w-10 h-10 text-white" />
               </div>
               <h3 className="text-2xl font-bold text-white mb-4">Experienced Team</h3>
               <p className="text-slate-300 leading-relaxed">Skilled professionals with extensive experience across various sectors and industries.</p>
             </div>
             
             <div className="group text-center p-8 rounded-2xl bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20 transition-all duration-300 hover:-translate-y-2">
-              <div className="relative w-20 h-20 mx-auto mb-6 rounded-2xl overflow-hidden">
-                <Image
-                  src={getImageUrl('team', '24/7 Support')}
-                  alt="24/7 Support"
-                  fill
-                  className="object-cover group-hover:scale-110 transition-transform duration-300"
-                />
-                <div className="absolute inset-0 bg-gradient-to-br from-purple-500/80 to-purple-600/80 flex items-center justify-center">
-                  <Clock className="w-10 h-10 text-white" />
-                </div>
+              <div className="relative w-20 h-20 mx-auto mb-6 rounded-2xl overflow-hidden bg-gradient-to-br from-purple-500/80 to-purple-600/80 flex items-center justify-center">
+                <Clock className="w-10 h-10 text-white" />
               </div>
               <h3 className="text-2xl font-bold text-white mb-4">24/7 Support</h3>
               <p className="text-slate-300 leading-relaxed">Round-the-clock support and emergency response services when you need them most.</p>
             </div>
             
             <div className="group text-center p-8 rounded-2xl bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20 transition-all duration-300 hover:-translate-y-2">
-              <div className="relative w-20 h-20 mx-auto mb-6 rounded-2xl overflow-hidden">
-                <Image
-                  src={getImageUrl('team', 'Quality Assurance')}
-                  alt="Quality Assurance"
-                  fill
-                  className="object-cover group-hover:scale-110 transition-transform duration-300"
-                />
-                <div className="absolute inset-0 bg-gradient-to-br from-orange-500/80 to-orange-600/80 flex items-center justify-center">
-                  <Award className="w-10 h-10 text-white" />
-                </div>
+              <div className="relative w-20 h-20 mx-auto mb-6 rounded-2xl overflow-hidden bg-gradient-to-br from-orange-500/80 to-orange-600/80 flex items-center justify-center">
+                <Award className="w-10 h-10 text-white" />
               </div>
               <h3 className="text-2xl font-bold text-white mb-4">Quality Assured</h3>
               <p className="text-slate-300 leading-relaxed">Certified services meeting the highest industry standards and regulatory requirements.</p>
@@ -362,7 +323,7 @@ export default function HomePage() {
               What Our Clients Say
             </h2>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed">
-              Don't just take our word for it. Here's what our satisfied clients have to say about our services.
+              Don&apos;t just take our word for it. Here&apos;s what our satisfied clients have to say about our services.
             </p>
           </div>
           
@@ -379,11 +340,11 @@ export default function HomePage() {
                 </div>
                 <div>
                   <h4 className="text-white font-semibold">John Smith</h4>
-                  <p className="text-slate-300 text-sm">CEO, TechCorp</p>
+                  <p className="text-slate-300 text-sm">Operations Manager, Manufacturing</p>
                 </div>
               </div>
-              <p className="text-slate-300 leading-relaxed mb-4">
-                "PGS FM Ltd has been providing exceptional security services for our office complex. Their team is professional, reliable, and always responsive to our needs."
+                <p className="text-slate-300 leading-relaxed mb-4">
+                &ldquo;The CCTV system they installed has given us complete peace of mind. The image quality is crystal clear, and we can monitor our facility 24/7 from anywhere. Their installation team was incredibly professional and tidy.&rdquo;
               </p>
               <div className="flex text-yellow-400">
                 {[...Array(5)].map((_, i) => (
@@ -404,11 +365,11 @@ export default function HomePage() {
                 </div>
                 <div>
                   <h4 className="text-white font-semibold">Sarah Johnson</h4>
-                  <p className="text-slate-300 text-sm">Facilities Manager, Retail Group</p>
+                  <p className="text-slate-300 text-sm">Office Manager, Professional Services</p>
                 </div>
               </div>
               <p className="text-slate-300 leading-relaxed mb-4">
-                "The cleaning services provided by PGS FM Ltd are outstanding. Our facilities have never looked better, and their attention to detail is remarkable."
+                &ldquo;Our office has never been cleaner! The team arrives on time every day and goes above and beyond. They use eco-friendly products and are always respectful of our workspace. Our clients consistently comment on how pristine our premises look.&rdquo;
               </p>
               <div className="flex text-yellow-400">
                 {[...Array(5)].map((_, i) => (
@@ -429,11 +390,11 @@ export default function HomePage() {
                 </div>
                 <div>
                   <h4 className="text-white font-semibold">Michael Brown</h4>
-                  <p className="text-slate-300 text-sm">Operations Director, Healthcare</p>
+                  <p className="text-slate-300 text-sm">Warehouse Manager, Distribution</p>
                 </div>
               </div>
               <p className="text-slate-300 leading-relaxed mb-4">
-                "24/7 support and rapid response times make PGS FM Ltd our trusted partner. Their security team understands our unique requirements perfectly."
+                &ldquo;The CCTV monitoring has been a game-changer for our warehouse operations. We can track deliveries, monitor staff safety, and the night vision cameras are exceptional. Their maintenance team keeps everything running smoothly.&rdquo;
               </p>
               <div className="flex text-yellow-400">
                 {[...Array(5)].map((_, i) => (

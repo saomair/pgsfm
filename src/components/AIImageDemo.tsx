@@ -72,7 +72,7 @@ export default function AIImageDemo({ title, description, type, text, prompt, fi
         {prompt && (
           <div className="bg-blue-50 rounded-lg p-4 mb-4">
             <h4 className="font-medium text-blue-900 mb-2">Suggested AI Prompt:</h4>
-            <p className="text-blue-800 text-sm italic">"{prompt}"</p>
+            <p className="text-blue-800 text-sm italic">&ldquo;{prompt}&rdquo;</p>
           </div>
         )}
 

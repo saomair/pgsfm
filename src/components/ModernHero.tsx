@@ -1,8 +1,7 @@
 'use client';
 
 import { ReactNode } from 'react';
-import Image from 'next/image';
-import { getImageUrl } from '@/lib/imagePresets';
+import { getImageUrl, getBackgroundColor } from '@/lib/imagePresets';
 import { Star } from 'lucide-react';
 import ModernButton from './ModernButton';
 
@@ -31,18 +30,13 @@ export default function ModernHero({
   badge,
   className = ""
 }: ModernHeroProps) {
+  const backgroundColor = getBackgroundColor('hero', imageText);
+  
   return (
-    <div className={`relative bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800 overflow-hidden ${className}`}>
-      {/* Hero Background Image */}
+    <div className={`relative ${backgroundColor} overflow-hidden ${className}`}>
+      {/* Hero Background */}
       <div className="absolute inset-0">
-        <Image
-          src={getImageUrl('hero', imageText)}
-          alt={imageText}
-          fill
-          priority
-          className="object-cover opacity-30"
-        />
-        <div className="absolute inset-0 bg-gradient-to-br from-slate-900/80 via-blue-900/80 to-slate-800/80"></div>
+        <div className="absolute inset-0 bg-black/20"></div>
       </div>
       
       {/* Background Pattern */}

@@ -1,8 +1,7 @@
-import Image from 'next/image';
 import Link from 'next/link';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { getImageUrl } from '@/lib/imagePresets';
+import { getImageUrl, getBackgroundColor } from '@/lib/imagePresets';
 import { Service } from '@/lib/data';
 
 interface ServiceCardProps {
@@ -11,16 +10,12 @@ interface ServiceCardProps {
 }
 
 export default function ServiceCard({ service, className = "" }: ServiceCardProps) {
+  const backgroundColor = getBackgroundColor('card', service.title);
+  
   return (
     <Card className={`group hover:shadow-lg transition-shadow duration-300 ${className}`}>
-      <div className="relative overflow-hidden">
-        <Image
-          src={getImageUrl('card', service.title)}
-          alt={`${service.title} service`}
-          width={1200}
-          height={900}
-          className="w-full h-[200px] md:h-[250px] object-cover group-hover:scale-105 transition-transform duration-300"
-        />
+      <div className={`relative overflow-hidden w-full h-[200px] md:h-[250px] ${backgroundColor}`}>
+        <div className="absolute inset-0 bg-black/10" />
       </div>
       <CardHeader>
         <CardTitle className="text-xl font-semibold text-gray-900">

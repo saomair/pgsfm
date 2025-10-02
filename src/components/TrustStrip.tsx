@@ -38,23 +38,32 @@ export default function TrustStrip({
         
         <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12">
           {displayAccreditations.map((accreditation, index) => (
-            <Link
-              key={index}
-              href={accreditation.website}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group flex items-center justify-center opacity-70 hover:opacity-100 transition-all duration-300 hover:scale-105"
-              title={accreditation.description}
-            >
-              <div className="relative w-24 h-12 md:w-32 md:h-16">
-                <Image
-                  src={accreditation.logoUrl}
-                  alt={`${accreditation.name} certification`}
-                  fill
-                  className="object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300"
-                />
-              </div>
-            </Link>
+            <div key={index} className="flex flex-col items-center">
+              <Link
+                href={accreditation.website}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex items-center justify-center opacity-70 hover:opacity-100 transition-all duration-300 hover:scale-105"
+                title={accreditation.description}
+              >
+                <div className="relative w-24 h-12 md:w-32 md:h-16">
+                  <Image
+                    src={accreditation.logoUrl}
+                    alt={`${accreditation.name} certification`}
+                    fill
+                    className="object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300"
+                  />
+                </div>
+              </Link>
+              {/* Show ACS description prominently */}
+              {accreditation.name === "ACS" && (
+                <div className="mt-3 max-w-xs text-center">
+                  <p className="text-xs md:text-sm text-gray-700 font-medium leading-tight">
+                    PGS FM LTD currently holds SIA Approved Contractor Scheme (ACS) status for the provision of Security Guarding
+                  </p>
+                </div>
+              )}
+            </div>
           ))}
         </div>
         

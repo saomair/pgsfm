@@ -228,49 +228,49 @@ export const accreditations: Accreditation[] = [
     name: "NASDU",
     description: "National Association of Security Dog Users - Professional security dog services certification",
     website: "https://www.nasdu.co.uk",
-    logoUrl: "https://placehold.co/200x100?text=NASDU",
+    logoUrl: "/Accridation/Nasdu.png",
     category: "security"
   },
   {
     name: "CHAS",
     description: "Contractors Health and Safety Assessment Scheme - Health and safety compliance certification",
     website: "https://www.chas.co.uk",
-    logoUrl: "https://placehold.co/200x100?text=CHAS",
+    logoUrl: "/Accridation/cafecontractor.png",
     category: "health-safety"
   },
   {
     name: "Constructionline",
     description: "Construction industry pre-qualification scheme - Construction sector compliance",
     website: "https://www.constructionline.co.uk",
-    logoUrl: "https://placehold.co/200x100?text=Constructionline",
+    logoUrl: "/Accridation/constructionline.png",
     category: "construction"
   },
   {
     name: "ICO",
     description: "Information Commissioner's Office - Data protection and privacy compliance",
     website: "https://ico.org.uk",
-    logoUrl: "https://placehold.co/200x100?text=ICO",
+    logoUrl: "/Accridation/ico.webp",
     category: "data-protection"
   },
   {
     name: "ACS",
-    description: "Approved Contractor Scheme - Security industry quality assurance",
-    website: "https://www.sia.homeoffice.gov.uk",
-    logoUrl: "https://placehold.co/200x100?text=ACS",
+    description: "PGS FM LTD currently holds SIA Approved Contractor Scheme (ACS) status for the provision of Security Guarding",
+    website: "https://www.services.sia.homeoffice.gov.uk/Pages/acs-roac.aspx?contractor=PSGFMLSC01",
+    logoUrl: "/Accridation/ACS.png",
     category: "security"
   },
   {
     name: "SafeContractor",
     description: "Health and safety accreditation for contractors - Workplace safety compliance",
     website: "https://www.safecontractor.com",
-    logoUrl: "https://placehold.co/200x100?text=SafeContractor",
+    logoUrl: "/Accridation/constructionline gold.png",
     category: "health-safety"
   },
   {
     name: "Cyber Essentials",
     description: "Government-backed cyber security certification - Information security standards",
     website: "https://www.cyberessentials.ncsc.gov.uk",
-    logoUrl: "https://placehold.co/200x100?text=Cyber+Essentials",
+    logoUrl: "/Accridation/Cyber Essentials.jpg",
     category: "cyber-security"
   }
 ];

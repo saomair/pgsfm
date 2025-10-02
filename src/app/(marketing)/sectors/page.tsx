@@ -4,7 +4,7 @@ import { sectors } from '@/lib/data';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import Image from 'next/image';
-import { getImageUrl } from '@/lib/imagePresets';
+import { getImageUrl, getBackgroundColor } from '@/lib/imagePresets';
 import { Building, Warehouse, Hospital, School, Landmark, ShoppingBag, Star, ArrowRight, CheckCircle } from 'lucide-react';
 
 export const metadata = {
@@ -24,17 +24,10 @@ export default function SectorsPage() {
   return (
     <>
       {/* Hero Section */}
-      <div className="relative bg-gradient-to-br from-slate-900 via-green-900 to-slate-800 overflow-hidden">
-        {/* Hero Background Image */}
+      <div className={`relative ${getBackgroundColor('hero', 'Specialized Sectors')} overflow-hidden`}>
+        {/* Hero Background */}
         <div className="absolute inset-0">
-          <Image
-            src={getImageUrl('hero', 'Specialized Sectors')}
-            alt="Specialized Sectors"
-            fill
-            priority
-            className="object-cover opacity-30"
-          />
-          <div className="absolute inset-0 bg-gradient-to-br from-slate-900/80 via-green-900/80 to-slate-800/80"></div>
+          <div className="absolute inset-0 bg-black/20"></div>
         </div>
         
         {/* Background Pattern */}
@@ -94,13 +87,7 @@ export default function SectorsPage() {
               const IconComponent = sectorIcons[sector.name as keyof typeof sectorIcons] || Building;
               return (
                 <div key={index} className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 overflow-hidden border border-gray-100">
-                  <div className="relative h-48 overflow-hidden">
-                    <Image
-                      src={getImageUrl('banner', sector.name)}
-                      alt={`${sector.name} sector`}
-                      fill
-                      className="object-cover group-hover:scale-105 transition-transform duration-300"
-                    />
+                  <div className={`relative h-48 overflow-hidden ${getBackgroundColor('banner', sector.name)}`}>
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
                     <div className="absolute inset-0 flex items-center justify-center">
                       <div className="text-center text-white">
@@ -286,16 +273,10 @@ export default function SectorsPage() {
       </div>
 
       {/* CTA Section */}
-      <div className="py-20 bg-gradient-to-r from-green-600 via-green-700 to-green-800 relative overflow-hidden">
+      <div className={`py-20 ${getBackgroundColor('banner', 'Sector Consultation')} relative overflow-hidden`}>
         {/* CTA Background Image */}
         <div className="absolute inset-0">
-          <Image
-            src={getImageUrl('banner', 'Sector Consultation')}
-            alt="Sector Consultation"
-            fill
-            className="object-cover opacity-20"
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-green-600/90 via-green-700/90 to-green-800/90"></div>
+          <div className="absolute inset-0 bg-black/20"></div>
         </div>
         
         <div className="absolute inset-0 opacity-20">

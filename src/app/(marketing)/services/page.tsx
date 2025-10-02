@@ -6,7 +6,7 @@ import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Shield, Users, Clock, CheckCircle, Star, ArrowRight } from 'lucide-react';
-import { getImageUrl } from '@/lib/imagePresets';
+import { getImageUrl, getBackgroundColor } from '@/lib/imagePresets';
 
 export const metadata = {
   title: 'Services - PGS FM Ltd Professional Security & Facilities Management',
@@ -17,17 +17,10 @@ export default function ServicesPage() {
   return (
     <>
       {/* Hero Section */}
-      <div className="relative bg-gradient-to-br from-slate-900 via-green-900 to-slate-800 overflow-hidden">
-        {/* Hero Background Image */}
+      <div className={`relative ${getBackgroundColor('hero', 'Security Services')} overflow-hidden`}>
+        {/* Hero Background */}
         <div className="absolute inset-0">
-          <Image
-            src={getImageUrl('hero', 'Security Services')}
-            alt="Security Services"
-            fill
-            priority
-            className="object-cover opacity-30"
-          />
-          <div className="absolute inset-0 bg-gradient-to-br from-slate-900/80 via-green-900/80 to-slate-800/80"></div>
+          <div className="absolute inset-0 bg-black/20"></div>
         </div>
         
         {/* Background Pattern */}
@@ -86,13 +79,7 @@ export default function ServicesPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
             {services.map((service, index) => (
               <div key={service.slug} className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 overflow-hidden border border-gray-100">
-                <div className="relative h-48 overflow-hidden">
-                  <Image
-                    src={getImageUrl('card', service.title)}
-                    alt={`${service.title} service`}
-                    fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-300"
-                  />
+                <div className={`relative h-48 overflow-hidden ${getBackgroundColor('card', service.title)}`}>
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
                   <div className="absolute inset-0 flex items-center justify-center">
                     <div className="text-center text-white">

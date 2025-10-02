@@ -17,7 +17,7 @@ export default function DemoPage() {
     message: ''
   });
 
-  const handleFormSubmit = async (data: FormData) => {
+  const handleFormSubmit = async (data: Record<string, unknown>) => {
     setIsLoading(true);
     // Simulate API call
     setTimeout(() => {

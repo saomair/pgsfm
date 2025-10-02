@@ -1,9 +1,10 @@
 'use client';
 
-import { ButtonHTMLAttributes, ReactNode } from 'react';
+import { ButtonHTMLAttributes, ReactNode, forwardRef } from 'react';
+import Link from 'next/link';
 import { cn } from '@/lib/utils';
 
-interface ModernButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+interface ModernButtonProps extends Omit<ButtonHTMLAttributes<HTMLButtonElement>, 'as'> {
   children: ReactNode;
   variant?: 'primary' | 'secondary' | 'outline' | 'ghost';
   size?: 'sm' | 'md' | 'lg' | 'xl';
@@ -11,9 +12,11 @@ interface ModernButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   icon?: ReactNode;
   iconPosition?: 'left' | 'right';
   className?: string;
+  as?: 'button' | 'a';
+  href?: string;
 }
 
-export default function ModernButton({
+const ModernButton = forwardRef<HTMLButtonElement | HTMLAnchorElement, ModernButtonProps>(({
   children,
   variant = 'primary',
   size = 'md',
@@ -21,8 +24,10 @@ export default function ModernButton({
   icon,
   iconPosition = 'right',
   className = "",
+  as = 'button',
+  href,
   ...props
-}: ModernButtonProps) {
+}, ref) => {
   const baseClasses = "font-semibold transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2";
   
   const variantClasses = {
@@ -45,25 +50,44 @@ export default function ModernButton({
   
   const iconClasses = icon ? (iconPosition === 'left' ? 'mr-2' : 'ml-2') : '';
 
+  const buttonClasses = cn(
+    baseClasses,
+    variantClasses[variant],
+    sizeClasses[size],
+    className
+  );
+
+  const content = (
+    <span className="flex items-center justify-center">
+      {icon && iconPosition === 'left' && (
+        <span className={iconClasses}>{icon}</span>
+      )}
+      {children}
+      {icon && iconPosition === 'right' && (
+        <span className={iconClasses}>{icon}</span>
+      )}
+    </span>
+  );
+
+  if (as === 'a' && href) {
+    return (
+      <Link href={href} className={buttonClasses} ref={ref as React.Ref<HTMLAnchorElement>}>
+        {content}
+      </Link>
+    );
+  }
+
   return (
     <button
-      className={cn(
-        baseClasses,
-        variantClasses[variant],
-        sizeClasses[size],
-        className
-      )}
+      className={buttonClasses}
+      ref={ref as React.Ref<HTMLButtonElement>}
       {...props}
     >
-      <span className="flex items-center justify-center">
-        {icon && iconPosition === 'left' && (
-          <span className={iconClasses}>{icon}</span>
-        )}
-        {children}
-        {icon && iconPosition === 'right' && (
-          <span className={iconClasses}>{icon}</span>
-        )}
-      </span>
+      {content}
     </button>
   );
-}
+});
+
+ModernButton.displayName = 'ModernButton';
+
+export default ModernButton;

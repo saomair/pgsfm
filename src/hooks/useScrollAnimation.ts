@@ -19,7 +19,7 @@ export function useScrollAnimation(options: UseScrollAnimationOptions = {}) {
 
   const [isVisible, setIsVisible] = useState(false);
   const [hasTriggered, setHasTriggered] = useState(false);
-  const elementRef = useRef<HTMLElement>(null);
+  const elementRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const element = elementRef.current;
@@ -99,7 +99,7 @@ export function useStaggeredAnimation(
 // Hook for parallax scrolling
 export function useParallax(speed: number = 0.5) {
   const [offset, setOffset] = useState(0);
-  const elementRef = useRef<HTMLElement>(null);
+  const elementRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const handleScroll = () => {

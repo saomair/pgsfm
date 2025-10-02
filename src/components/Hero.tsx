@@ -1,6 +1,5 @@
-import Image from 'next/image';
 import { Button } from '@/components/ui/button';
-import { getImageUrl } from '@/lib/imagePresets';
+import { getImageUrl, getBackgroundColor } from '@/lib/imagePresets';
 
 interface HeroProps {
   title: string;
@@ -24,18 +23,12 @@ export default function Hero({
   className = ""
 }: HeroProps) {
   const heroImageUrl = imageUrl || getImageUrl('hero', 'Professional Security Services');
+  const backgroundColor = getBackgroundColor('hero', 'Professional Security Services');
 
   return (
     <section className={`relative min-h-[400px] md:min-h-[500px] lg:min-h-[600px] flex items-center ${className}`}>
-      <div className="absolute inset-0 z-0">
-        <Image
-          src={heroImageUrl}
-          alt={imageAlt}
-          fill
-          priority
-          className="object-cover"
-        />
-        <div className="absolute inset-0 bg-black/40" />
+      <div className={`absolute inset-0 z-0 ${backgroundColor}`}>
+        <div className="absolute inset-0 bg-black/20" />
       </div>
       
       <div className="relative z-10 container mx-auto px-4 py-16">

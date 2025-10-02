@@ -19,22 +19,13 @@ export const metadata: Metadata = {
     description: "Leading provider of security services, facilities management, and cleaning solutions across the UK.",
     url: "https://www.pgsfm.uk",
     siteName: "PGS FM Ltd",
-    images: [
-      {
-        url: "https://placehold.co/1200x630?text=PGS+FM+Ltd+Professional+Security",
-        width: 1200,
-        height: 630,
-        alt: "PGS FM Ltd Professional Security Services",
-      },
-    ],
     locale: "en_GB",
     type: "website",
   },
   twitter: {
-    card: "summary_large_image",
+    card: "summary",
     title: "PGS FM Ltd - Professional Security & Facilities Management",
     description: "Leading provider of security services, facilities management, and cleaning solutions across the UK.",
-    images: ["https://placehold.co/1200x630?text=PGS+FM+Ltd+Professional+Security"],
   },
   robots: {
     index: true,

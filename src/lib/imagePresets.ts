@@ -34,51 +34,20 @@ export const imagePresets = {
 } as const;
 
 export const getImageUrl = (type: keyof typeof imagePresets, text?: string): string => {
-  const preset = imagePresets[type];
-  
-  // AI-Generated Images Map - Replace these with your actual generated images
-  const aiGeneratedImages = {
-    hero: {
-      'Professional Security Team': '/images/ai-generated/hero-security-team.jpg',
-      'Security Services': '/images/ai-generated/hero-security-services.jpg',
-      'default': '/images/ai-generated/hero-default.jpg'
-    },
-    card: {
-      'Security Services': '/images/ai-generated/card-security-services.jpg',
-      'Facilities Management': '/images/ai-generated/card-facilities-management.jpg',
-      'Cleaning Services': '/images/ai-generated/card-cleaning-services.jpg',
-      'default': '/images/ai-generated/card-default.jpg'
-    },
-    team: {
-      'John Smith': '/images/ai-generated/team-john-smith.jpg',
-      'Sarah Johnson': '/images/ai-generated/team-sarah-johnson.jpg',
-      'Michael Brown': '/images/ai-generated/team-michael-brown.jpg',
-      'Emma Wilson': '/images/ai-generated/team-emma-wilson.jpg',
-      'default': '/images/ai-generated/team-default.jpg'
-    },
-    banner: {
-      'Healthcare Sector': '/images/ai-generated/banner-healthcare.jpg',
-      'Retail Sector': '/images/ai-generated/banner-retail.jpg',
-      'Corporate Sector': '/images/ai-generated/banner-corporate.jpg',
-      'Contact Us': '/images/ai-generated/banner-contact.jpg',
-      'default': '/images/ai-generated/banner-default.jpg'
-    },
-    blog: {
-      'default': '/images/ai-generated/blog-default.jpg'
-    }
-  };
+  // Return a placeholder URL for now - in production this would generate actual images
+  const encodedText = text ? encodeURIComponent(text) : 'placeholder';
+  return `https://placehold.co/${imagePresets[type].width}x${imagePresets[type].height}/1f2937/ffffff?text=${encodedText}`;
+};
 
-  // Check if we have an AI-generated image for this type and text
-  if (text && aiGeneratedImages[type] && aiGeneratedImages[type][text]) {
-    return aiGeneratedImages[type][text];
-  }
+// Helper function to get background color classes based on image type
+export const getBackgroundColor = (type: keyof typeof imagePresets, text?: string): string => {
+  const colorMap = {
+    hero: 'bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800',
+    card: 'bg-gradient-to-br from-green-600 to-green-700',
+    team: 'bg-gradient-to-br from-blue-600 to-blue-700',
+    banner: 'bg-gradient-to-br from-slate-800 to-slate-900',
+    blog: 'bg-gradient-to-br from-purple-600 to-purple-700'
+  };
   
-  // Fallback to default AI-generated image for this type
-  if (aiGeneratedImages[type] && aiGeneratedImages[type]['default']) {
-    return aiGeneratedImages[type]['default'];
-  }
-  
-  // Final fallback to placeholder service
-  const textParam = text ? `?text=${encodeURIComponent(text)}` : '';
-  return `https://placehold.co/${preset.width}x${preset.height}${textParam}`;
+  return colorMap[type] || 'bg-gradient-to-br from-gray-600 to-gray-700';
 };

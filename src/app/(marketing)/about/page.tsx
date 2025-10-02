@@ -1,10 +1,10 @@
 import Hero from '@/components/Hero';
 import Section from '@/components/Section';
 import AccreditationsGrid from '@/components/AccreditationsGrid';
-import Image from 'next/image';
-import { getImageUrl } from '@/lib/imagePresets';
+import { getImageUrl, getBackgroundColor } from '@/lib/imagePresets';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Shield, Users, Award, Clock, Star, ArrowRight } from 'lucide-react';
 
 export const metadata = {
@@ -87,14 +87,7 @@ export default function AboutPage() {
               </p>
             </div>
             <div className="relative group">
-              <div className="relative rounded-2xl overflow-hidden shadow-2xl group-hover:shadow-3xl transition-all duration-300">
-                <Image
-                  src={getImageUrl('banner', 'Professional Team')}
-                  alt="PGS FM Ltd Professional Team"
-                  width={600}
-                  height={400}
-                  className="w-full h-[500px] object-cover group-hover:scale-105 transition-transform duration-300"
-                />
+              <div className={`relative rounded-2xl overflow-hidden shadow-2xl group-hover:shadow-3xl transition-all duration-300 w-full h-[500px] ${getBackgroundColor('banner', 'Professional Team')}`}>
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
               </div>
             </div>
@@ -257,13 +250,7 @@ export default function AboutPage() {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 overflow-hidden border border-gray-100">
-              <div className="relative h-64 overflow-hidden">
-                <Image
-                  src={getImageUrl('team', 'Security Specialist')}
-                  alt="Security Specialist"
-                  fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-300"
-                />
+              <div className={`relative h-64 overflow-hidden ${getBackgroundColor('team', 'Security Specialist')}`}>
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
               </div>
               <div className="p-6">
@@ -273,13 +260,7 @@ export default function AboutPage() {
             </div>
             
             <div className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 overflow-hidden border border-gray-100">
-              <div className="relative h-64 overflow-hidden">
-                <Image
-                  src={getImageUrl('team', 'Facilities Manager')}
-                  alt="Facilities Manager"
-                  fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-300"
-                />
+              <div className={`relative h-64 overflow-hidden ${getBackgroundColor('team', 'Facilities Manager')}`}>
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
               </div>
               <div className="p-6">
@@ -289,13 +270,7 @@ export default function AboutPage() {
             </div>
             
             <div className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 overflow-hidden border border-gray-100">
-              <div className="relative h-64 overflow-hidden">
-                <Image
-                  src={getImageUrl('team', 'Support Staff')}
-                  alt="Support Staff"
-                  fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-300"
-                />
+              <div className={`relative h-64 overflow-hidden ${getBackgroundColor('team', 'Support Staff')}`}>
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
               </div>
               <div className="p-6">
@@ -311,16 +286,10 @@ export default function AboutPage() {
       <AccreditationsGrid />
 
       {/* CTA Section */}
-      <div className="py-20 bg-gradient-to-r from-green-600 via-green-700 to-green-800 relative overflow-hidden">
-        {/* CTA Background Image */}
+      <div className={`py-20 ${getBackgroundColor('banner', 'Partner with PGS FM Ltd')} relative overflow-hidden`}>
+        {/* CTA Background */}
         <div className="absolute inset-0">
-          <Image
-            src={getImageUrl('banner', 'Partner with PGS FM Ltd')}
-            alt="Partner with PGS FM Ltd"
-            fill
-            className="object-cover opacity-20"
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-green-600/90 via-green-700/90 to-green-800/90"></div>
+          <div className="absolute inset-0 bg-black/20"></div>
         </div>
         
         <div className="absolute inset-0 opacity-20">

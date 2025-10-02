@@ -208,7 +208,7 @@ export function AnimatedFormField({
 // Enhanced form component
 interface AnimatedFormProps {
   children: React.ReactNode;
-  onSubmit: (data: any) => void;
+  onSubmit: (data: Record<string, unknown>) => void;
   className?: string;
   loading?: boolean;
 }
@@ -226,7 +226,12 @@ export function AnimatedForm({
     setIsSubmitting(true);
     
     try {
-      await onSubmit(new FormData(e.target as HTMLFormElement));
+      const formData = new FormData(e.target as HTMLFormElement);
+      const data: Record<string, unknown> = {};
+      formData.forEach((value, key) => {
+        data[key] = value;
+      });
+      await onSubmit(data);
     } finally {
       setIsSubmitting(false);
     }

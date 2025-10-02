@@ -22,18 +22,18 @@ export default function ContactPage() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
 
-  const handleFormSubmit = async (data: FormData) => {
+  const handleFormSubmit = async (data: Record<string, unknown>) => {
     setIsSubmitting(true);
     setSubmitStatus('idle');
     
     try {
       // Create form data object
       const formPayload = {
-        name: formData.name,
-        email: formData.email,
-        phone: formData.phone,
-        topic: formData.topic,
-        message: formData.message,
+        name: data.name as string || formData.name,
+        email: data.email as string || formData.email,
+        phone: data.phone as string || formData.phone,
+        topic: data.topic as string || formData.topic,
+        message: data.message as string || formData.message,
         timestamp: new Date().toISOString(),
         source: 'website_contact_form'
       };
@@ -175,7 +175,7 @@ export default function ContactPage() {
                 Get in Touch
               </h2>
               <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-                Fill out the form below and we'll get back to you within 24 hours. For urgent matters, please call us directly.
+                Fill out the form below and we&apos;ll get back to you within 24 hours. For urgent matters, please call us directly.
               </p>
             </div>
           </ScrollReveal>
@@ -274,7 +274,7 @@ export default function ContactPage() {
                     Reach Out to Us
                   </h2>
                   <p className="text-gray-600 mb-6 leading-relaxed">
-                    We're here to help with all your security and facilities management needs.
+                    We&apos;re here to help with all your security and facilities management needs.
                   </p>
 
                   {/* Contact Details */}
@@ -332,7 +332,7 @@ export default function ContactPage() {
                       </div>
                       <div>
                         <h3 className="text-lg font-bold text-gray-900 mb-1">Business Hours</h3>
-                        <p className="text-gray-600 mb-2 text-sm">When we're available</p>
+                        <p className="text-gray-600 mb-2 text-sm">When we&apos;re available</p>
                         <div className="text-gray-600 space-y-1 text-sm">
                           <p className="font-medium">Monday - Friday: 08:00 - 18:00</p>
                           <p className="font-medium">Saturday: 09:00 - 16:00</p>

@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { Menu, X, ChevronDown } from 'lucide-react';
 import { navigation, services, sectors } from '@/lib/data';
@@ -14,12 +15,18 @@ export default function Header() {
   return (
     <header className="bg-white shadow-sm sticky top-0 z-50">
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-16">
-          {/* Company Name */}
+        <div className="flex items-center justify-between h-16 md:h-20">
+          {/* Company Logo */}
           <Link href="/" className="flex items-center">
-            <span className="text-2xl font-bold text-gray-900 hover:text-green-600 transition-colors">
-              PGS FM Ltd
-            </span>
+            <div className="relative w-12 h-12 md:w-16 md:h-16">
+              <Image
+                src="/pgsfm-logo.jpg"
+                alt="PGS FM Ltd Logo"
+                fill
+                className="object-contain"
+                priority
+              />
+            </div>
           </Link>
 
           {/* Desktop Navigation */}
