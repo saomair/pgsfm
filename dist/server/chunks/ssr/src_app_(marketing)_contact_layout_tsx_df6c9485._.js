@@ -1,0 +1,3 @@
+module.exports=[70306,a=>{"use strict";a.s(["default",()=>c,"metadata",()=>b]);let b={title:"Contact Us - PGS FM Ltd Professional Security & Facilities Management",description:"Get in touch with PGS FM Ltd for professional security services, facilities management, and cleaning solutions. Free consultations and quotes available."};function c({children:a}){return a}}];
+
+//# sourceMappingURL=src_app_%28marketing%29_contact_layout_tsx_df6c9485._.js.map
