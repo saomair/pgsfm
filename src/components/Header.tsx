@@ -45,7 +45,11 @@ export default function Header() {
                     
                     {/* Services Dropdown */}
                     {isServicesDropdownOpen && (
-                      <div className="absolute top-full left-0 mt-3 w-[520px] bg-white rounded-xl shadow-2xl border border-gray-200/50 py-6 z-50 overflow-hidden backdrop-blur-sm">
+                      <div 
+                        className="absolute top-full left-0 mt-1 w-[520px] bg-white rounded-xl shadow-2xl border border-gray-200/50 py-6 z-50 overflow-hidden backdrop-blur-sm"
+                        onMouseEnter={() => setIsServicesDropdownOpen(true)}
+                        onMouseLeave={() => setIsServicesDropdownOpen(false)}
+                      >
                         <div className="flex">
                           {/* Services Column */}
                           <div className="flex-1 px-6 py-1">
@@ -126,7 +130,11 @@ export default function Header() {
                     
                     {/* CCTV Dropdown */}
                     {isCCTVDropdownOpen && (
-                      <div className="absolute top-full left-0 mt-1 w-48 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50">
+                      <div 
+                        className="absolute top-full left-0 mt-1 w-48 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50"
+                        onMouseEnter={() => setIsCCTVDropdownOpen(true)}
+                        onMouseLeave={() => setIsCCTVDropdownOpen(false)}
+                      >
                         <Link
                           href="/cctv-services"
                           className="block px-4 py-2 text-sm text-gray-700 hover:bg-green-50 hover:text-green-600 transition-colors"

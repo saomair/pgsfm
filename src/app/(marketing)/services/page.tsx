@@ -5,12 +5,30 @@ import { services } from '@/lib/data';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import Image from 'next/image';
-import { Shield, Users, Clock, CheckCircle, Star, ArrowRight } from 'lucide-react';
+import { Shield, Users, Clock, CheckCircle, Star, ArrowRight, Eye, Car, Calendar, Briefcase, Building, Camera, Sparkles } from 'lucide-react';
 import { getImageUrl, getBackgroundColor } from '@/lib/imagePresets';
 
 export const metadata = {
   title: 'Services - PGS FM Ltd Professional Security & Facilities Management',
   description: 'Comprehensive security services, facilities management, and cleaning solutions. Professional, reliable, and tailored to your business needs.',
+};
+
+// Icon mapping for services
+const getServiceIcon = (serviceTitle: string) => {
+  const iconMap: { [key: string]: React.ComponentType<{ className?: string }> } = {
+    'Static Guarding': Shield,
+    'Corporate Protection & Security': Briefcase,
+    'Immediate Response Team': Clock,
+    'Event Security': Calendar,
+    'Mobile Patrols': Car,
+    'Concierge Services': Users,
+    'Industrial / Warehouse Security': Building,
+    'Cleaning Services': Sparkles,
+    'CCTV Installation & Monitoring': Camera,
+    'CCTV Towers - Mobile Surveillance': Eye
+  };
+  
+  return iconMap[serviceTitle] || Shield;
 };
 
 export default function ServicesPage() {
@@ -84,7 +102,10 @@ export default function ServicesPage() {
                   <div className="absolute inset-0 flex items-center justify-center">
                     <div className="text-center text-white">
                       <div className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                        <Shield className="w-8 h-8 text-white" />
+                        {(() => {
+                          const IconComponent = getServiceIcon(service.title);
+                          return <IconComponent className="w-8 h-8 text-white" />;
+                        })()}
                       </div>
                       <h3 className="text-xl font-bold">{service.title}</h3>
                     </div>

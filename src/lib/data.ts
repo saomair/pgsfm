@@ -146,14 +146,14 @@ export const sectors: Sector[] = [
     name: "Warehouse Facilities Management",
     description: "Distribution centers, storage facilities, and logistics hubs with specialized security and maintenance needs."
   },
-  {
-    name: "Hospitals & Schools",
-    description: "Healthcare facilities and educational institutions requiring sensitive security and cleaning protocols."
-  },
-  {
-    name: "Public Sector Facilities Management",
-    description: "Government buildings, public offices, and civic facilities with strict compliance requirements."
-  },
+  // {
+  //   name: "Hospitals & Schools",
+  //   description: "Healthcare facilities and educational institutions requiring sensitive security and cleaning protocols."
+  // },
+  // {
+  //   name: "Public Sector Facilities Management",
+  //   description: "Government buildings, public offices, and civic facilities with strict compliance requirements."
+  // },
   {
     name: "Retail Facilities Management",
     description: "Shopping centers, retail stores, and commercial spaces requiring integrated security and maintenance services."
@@ -218,7 +218,7 @@ export const navigation = [
   { name: "Home", href: "/" },
   { name: "About", href: "/about" },
   { name: "Services", href: "/services" },
-  { name: "CCTV", href: "/cctv-services" },
+  // { name: "CCTV", href: "/cctv-services" },
   { name: "Cleaning", href: "/cleaning" },
   { name: "Contact", href: "/contact" }
 ];

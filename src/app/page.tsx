@@ -7,8 +7,26 @@ import { services, sectors } from '@/lib/data';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import Image from 'next/image';
-import { Shield, Users, Clock, Award, ArrowRight, CheckCircle, Star, Building } from 'lucide-react';
+import { Shield, Users, Clock, Award, ArrowRight, CheckCircle, Star, Building, Eye, Car, Calendar, Briefcase, MapPin, Camera, Sparkles } from 'lucide-react';
 import { getImageUrl, getBackgroundColor } from '@/lib/imagePresets';
+
+// Icon mapping for services
+const getServiceIcon = (serviceTitle: string) => {
+  const iconMap: { [key: string]: React.ComponentType<{ className?: string }> } = {
+    'Static Guarding': Shield,
+    'Corporate Protection & Security': Briefcase,
+    'Immediate Response Team': Clock,
+    'Event Security': Calendar,
+    'Mobile Patrols': Car,
+    'Concierge Services': Users,
+    'Industrial / Warehouse Security': Building,
+    'Cleaning Services': Sparkles,
+    'CCTV Installation & Monitoring': Camera,
+    'CCTV Towers - Mobile Surveillance': Eye
+  };
+  
+  return iconMap[serviceTitle] || Shield;
+};
 
 export default function HomePage() {
   return (
@@ -35,7 +53,7 @@ export default function HomePage() {
               <div className="text-center lg:text-left">
                 <div className="inline-flex items-center px-4 py-2 rounded-full bg-green-500/20 border border-green-400/30 text-green-200 text-sm font-medium mb-6">
                   <Star className="w-4 h-4 mr-2" />
-                  Trusted by 500+ businesses across the UK
+                  Trusted by businesses across the UK
                 </div>
                 
                 <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
@@ -64,11 +82,11 @@ export default function HomePage() {
                 </div>
                 
                 {/* Stats */}
-                <div className="grid grid-cols-3 gap-6">
-                  <div className="text-center lg:text-left">
+                <div className="grid grid-cols-2 gap-6">
+                  {/* <div className="text-center lg:text-left">
                     <div className="text-2xl font-bold text-white mb-1">500+</div>
                     <div className="text-slate-300 text-sm">Happy Clients</div>
-                  </div>
+                  </div> */}
                   <div className="text-center lg:text-left">
                     <div className="text-2xl font-bold text-white mb-1">24/7</div>
                     <div className="text-slate-300 text-sm">Support Available</div>
@@ -153,7 +171,10 @@ export default function HomePage() {
                   <div className="absolute inset-0 flex items-center justify-center">
                     <div className="text-center text-white">
                       <div className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 group-hover:bg-white/30 transition-all duration-300">
-                        <Shield className="w-8 h-8 text-white" />
+                        {(() => {
+                          const IconComponent = getServiceIcon(service.title);
+                          return <IconComponent className="w-8 h-8 text-white" />;
+                        })()}
                       </div>
                       <h3 className="text-xl font-bold group-hover:text-green-200 transition-colors duration-300">{service.title}</h3>
                     </div>

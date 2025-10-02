@@ -7,9 +7,9 @@ import { getImageUrl, getBackgroundColor } from '@/lib/imagePresets';
 import { CheckCircle, ArrowLeft, Star, ArrowRight } from 'lucide-react';
 
 interface ServicePageProps {
-  params: {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 }
 
 export async function generateStaticParams() {

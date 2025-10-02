@@ -7,9 +7,9 @@ import { getImageUrl } from '@/lib/imagePresets';
 import { ArrowLeft, FileText, Calendar, User, Star, ArrowRight } from 'lucide-react';
 
 interface PolicyPageProps {
-  params: {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 }
 
 export async function generateStaticParams() {
