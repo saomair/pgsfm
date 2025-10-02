@@ -1,20 +1,6 @@
 {
   "/(marketing)/about/page": "app/(marketing)/about/page.js",
-  "/(marketing)/cctv-services/page": "app/(marketing)/cctv-services/page.js",
-  "/(marketing)/cctv-towers/page": "app/(marketing)/cctv-towers/page.js",
-  "/(marketing)/cleaning/page": "app/(marketing)/cleaning/page.js",
   "/(marketing)/contact/page": "app/(marketing)/contact/page.js",
-  "/(marketing)/demo-ai-images/page": "app/(marketing)/demo-ai-images/page.js",
-  "/(marketing)/demo/page": "app/(marketing)/demo/page.js",
-  "/(marketing)/policies/[slug]/page": "app/(marketing)/policies/[slug]/page.js",
-  "/(marketing)/policies/page": "app/(marketing)/policies/page.js",
-  "/(marketing)/sectors/page": "app/(marketing)/sectors/page.js",
-  "/(marketing)/services/[slug]/page": "app/(marketing)/services/[slug]/page.js",
   "/(marketing)/services/page": "app/(marketing)/services/page.js",
-  "/_not-found/page": "app/_not-found/page.js",
-  "/api/contact/route": "app/api/contact/route.js",
-  "/api/dalle/route": "app/api/dalle/route.js",
-  "/api/demo/route": "app/api/demo/route.js",
-  "/favicon.ico/route": "app/favicon.ico/route.js",
   "/page": "app/page.js"
 }
