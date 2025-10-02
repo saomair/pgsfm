@@ -113,28 +113,28 @@ export const services: Service[] = [
       "Flexible scheduling options"
     ]
   },
-  {
-    title: "CCTV Installation & Monitoring",
-    slug: "cctv-services",
-    description: "Professional CCTV installation and 24/7 monitoring services for commercial properties.",
-    features: [
-      "HD camera installation and positioning",
-      "24/7 professional monitoring",
-      "Remote access and mobile apps",
-      "Motion detection and instant alerts"
-    ]
-  },
-  {
-    title: "CCTV Towers - Mobile Surveillance",
-    slug: "cctv-towers",
-    description: "Rapid deployment CCTV towers for temporary security needs across UK commercial properties.",
-    features: [
-      "Rapid 24-hour deployment",
-      "Solar-powered autonomous operation",
-      "360-degree HD surveillance coverage",
-      "4G/5G connectivity and remote monitoring"
-    ]
-  }
+  // {
+  //   title: "CCTV Installation & Monitoring",
+  //   slug: "cctv-services",
+  //   description: "Professional CCTV installation and 24/7 monitoring services for commercial properties.",
+  //   features: [
+  //     "HD camera installation and positioning",
+  //     "24/7 professional monitoring",
+  //     "Remote access and mobile apps",
+  //     "Motion detection and instant alerts"
+  //   ]
+  // },
+  // {
+  //   title: "CCTV Towers - Mobile Surveillance",
+  //   slug: "cctv-towers",
+  //   description: "Rapid deployment CCTV towers for temporary security needs across UK commercial properties.",
+  //   features: [
+  //     "Rapid 24-hour deployment",
+  //     "Solar-powered autonomous operation",
+  //     "360-degree HD surveillance coverage",
+  //     "4G/5G connectivity and remote monitoring"
+  //   ]
+  // }
 ];
 
 export const sectors: Sector[] = [

@@ -5,18 +5,16 @@ import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import Image from 'next/image';
 import { getImageUrl, getBackgroundColor } from '@/lib/imagePresets';
-import { Building, Warehouse, Hospital, School, Landmark, ShoppingBag, Star, ArrowRight, CheckCircle } from 'lucide-react';
+import { Building, Warehouse, ShoppingBag, Star, ArrowRight, CheckCircle } from 'lucide-react';
 
 export const metadata = {
   title: 'Specialized Sectors - PGS FM Ltd Professional Security & Facilities Management',
-  description: 'We serve diverse sectors including corporate buildings, warehouses, hospitals, schools, public sector, and retail facilities with tailored security and management solutions.',
+  description: 'We serve diverse sectors including corporate buildings, warehouses, and retail facilities with tailored security and management solutions.',
 };
 
 const sectorIcons = {
   'Corporate Buildings': Building,
   'Warehouse Facilities Management': Warehouse,
-  'Hospitals & Schools': Hospital,
-  'Public Sector Facilities Management': Landmark,
   'Retail Facilities Management': ShoppingBag,
 };
 
@@ -156,27 +154,6 @@ export default function SectorsPage() {
                 </ul>
               </div>
               
-              <div className="bg-white/10 backdrop-blur-sm p-8 rounded-2xl border border-white/20 hover:bg-white/20 transition-all duration-300">
-                <h3 className="text-2xl font-bold text-white mb-6">Healthcare & Education</h3>
-                <ul className="space-y-4 text-slate-300">
-                  <li className="flex items-start">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0 mt-0.5" />
-                    Patient and student safety protocols
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0 mt-0.5" />
-                    Emergency response and evacuation procedures
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0 mt-0.5" />
-                    Specialized cleaning and sanitization
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0 mt-0.5" />
-                    Compliance with health and safety regulations
-                  </li>
-                </ul>
-              </div>
             </div>
             
             <div className="space-y-8">
@@ -202,27 +179,6 @@ export default function SectorsPage() {
                 </ul>
               </div>
               
-              <div className="bg-white/10 backdrop-blur-sm p-8 rounded-2xl border border-white/20 hover:bg-white/20 transition-all duration-300">
-                <h3 className="text-2xl font-bold text-white mb-6">Public Sector</h3>
-                <ul className="space-y-4 text-slate-300">
-                  <li className="flex items-start">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0 mt-0.5" />
-                    Government building security protocols
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0 mt-0.5" />
-                    Public safety and crowd management
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0 mt-0.5" />
-                    Compliance with public sector regulations
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0 mt-0.5" />
-                    Emergency preparedness and response
-                  </li>
-                </ul>
-              </div>
             </div>
           </div>
         </div>
@@ -255,7 +211,7 @@ export default function SectorsPage() {
             
             <div className="group text-center p-8 bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-gray-100">
               <div className="w-20 h-20 bg-gradient-to-br from-green-500 to-green-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-                <School className="w-10 h-10 text-white" />
+                <Building className="w-10 h-10 text-white" />
               </div>
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Tailored Solutions</h3>
               <p className="text-gray-600 leading-relaxed">Customized services designed specifically for your sector&apos;s unique challenges and needs.</p>
@@ -263,7 +219,7 @@ export default function SectorsPage() {
             
             <div className="group text-center p-8 bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-gray-100">
               <div className="w-20 h-20 bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-                <Hospital className="w-10 h-10 text-white" />
+                <CheckCircle className="w-10 h-10 text-white" />
               </div>
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Compliance Ready</h3>
               <p className="text-gray-600 leading-relaxed">Full compliance with sector-specific regulations and industry standards.</p>
