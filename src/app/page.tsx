@@ -7,7 +7,7 @@ import { services, sectors } from '@/lib/data';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import Image from 'next/image';
-import { Shield, Users, Clock, Award, ArrowRight, CheckCircle, Star, Building, Eye, Car, Calendar, Briefcase, MapPin, Camera, Sparkles } from 'lucide-react';
+import { Shield, Users, Clock, Award, ArrowRight, CheckCircle, Star, Building, Car, Calendar, Briefcase, MapPin, Sparkles } from 'lucide-react';
 import { getImageUrl, getBackgroundColor } from '@/lib/imagePresets';
 
 // Icon mapping for services
@@ -20,9 +20,7 @@ const getServiceIcon = (serviceTitle: string) => {
     'Mobile Patrols': Car,
     'Concierge Services': Users,
     'Industrial / Warehouse Security': Building,
-    'Cleaning Services': Sparkles,
-    'CCTV Installation & Monitoring': Camera,
-    'CCTV Towers - Mobile Surveillance': Eye
+    'Cleaning Services': Sparkles
   };
   
   return iconMap[serviceTitle] || Shield;
@@ -353,31 +351,6 @@ export default function HomePage() {
               <div className="flex items-center mb-6">
                 <div className="relative w-12 h-12 rounded-full overflow-hidden mr-4">
                   <Image
-                    src={getImageUrl('team', 'John Smith')}
-                    alt="John Smith"
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-                <div>
-                  <h4 className="text-white font-semibold">John Smith</h4>
-                  <p className="text-slate-300 text-sm">Operations Manager, Manufacturing</p>
-                </div>
-              </div>
-                <p className="text-slate-300 leading-relaxed mb-4">
-                &ldquo;The CCTV system they installed has given us complete peace of mind. The image quality is crystal clear, and we can monitor our facility 24/7 from anywhere. Their installation team was incredibly professional and tidy.&rdquo;
-              </p>
-              <div className="flex text-yellow-400">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-4 h-4 fill-current" />
-                ))}
-              </div>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300">
-              <div className="flex items-center mb-6">
-                <div className="relative w-12 h-12 rounded-full overflow-hidden mr-4">
-          <Image
                     src={getImageUrl('team', 'Sarah Johnson')}
                     alt="Sarah Johnson"
                     fill
@@ -398,11 +371,11 @@ export default function HomePage() {
                 ))}
               </div>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300">
               <div className="flex items-center mb-6">
                 <div className="relative w-12 h-12 rounded-full overflow-hidden mr-4">
-          <Image
+                  <Image
                     src={getImageUrl('team', 'Michael Brown')}
                     alt="Michael Brown"
                     fill
@@ -415,7 +388,32 @@ export default function HomePage() {
                 </div>
               </div>
               <p className="text-slate-300 leading-relaxed mb-4">
-                &ldquo;The CCTV monitoring has been a game-changer for our warehouse operations. We can track deliveries, monitor staff safety, and the night vision cameras are exceptional. Their maintenance team keeps everything running smoothly.&rdquo;
+                &ldquo;The security team has transformed our warehouse operations. Their static guarding service provides 24/7 protection, and their mobile patrols ensure comprehensive coverage. The incident reporting is detailed and professional. We feel completely secure.&rdquo;
+              </p>
+              <div className="flex text-yellow-400">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} className="w-4 h-4 fill-current" />
+                ))}
+              </div>
+            </div>
+
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300">
+              <div className="flex items-center mb-6">
+                <div className="relative w-12 h-12 rounded-full overflow-hidden mr-4">
+                  <Image
+                    src={getImageUrl('team', 'Emma Wilson')}
+                    alt="Emma Wilson"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div>
+                  <h4 className="text-white font-semibold">Emma Wilson</h4>
+                  <p className="text-slate-300 text-sm">Event Coordinator, Corporate Events</p>
+                </div>
+              </div>
+              <p className="text-slate-300 leading-relaxed mb-4">
+                &ldquo;PGS FM&apos;s event security team is exceptional. They handled our corporate conference with over 500 attendees flawlessly. Their crowd management skills and professional approach made our event run smoothly. Highly recommended for any large gathering.&rdquo;
               </p>
               <div className="flex text-yellow-400">
                 {[...Array(5)].map((_, i) => (

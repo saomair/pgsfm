@@ -24,10 +24,6 @@ These prompts align with the updated PGS FM Ltd art direction and the uniform ru
   - Prompt: "Collage-style wide shot of UK sector environments: modern corporate lobby, NHS hospital corridor, logistics warehouse, and retail atrium, seamless transitions, UK security officers in plain high-vis jackets present in each vignette, no logos, clean professional composition."
 - **Professional Cleaning Services** (1792x1024 → crop 1920x800)
   - Prompt: "Bright London office interior being cleaned by UK facilities staff in navy uniforms with subtle hi-vis trims, no logos, using commercial cleaning equipment, reflective glass partitions, morning daylight, spotless corporate environment."
-- **CCTV Security Systems** (1792x1024 → crop 1920x800)
-  - Prompt: "UK security technician in plain high-vis jacket and white hard hat installing a CCTV camera on a London office exterior, assistant monitoring feeds on a tablet, no logos, city skyline soft focus, daytime lighting."
-- **CCTV Towers Mobile Surveillance** (1792x1024 → crop 1920x800)
-  - Prompt: "Temporary CCTV tower deployed on a UK construction site with portable solar panels, two officers in plain hi-vis jackets and white hard hats inspecting footage on a laptop, no logos, cranes and London skyline in background, dawn light."
 - **Contact Us** (1792x1024 → crop 1920x800)
   - Prompt: "Welcoming London reception desk with UK security concierge in black suit and plain hi-vis armband assisting a visitor, digital access panel glowing, no logos, soft warm lighting, modern office lobby."
 - **Our Policies** (1792x1024 → crop 1920x800)
@@ -42,8 +38,6 @@ These prompts align with the updated PGS FM Ltd art direction and the uniform ru
 - **Concierge Services** – "Upscale London office lobby, UK concierge security professional in navy suit standing beside a digital visitor kiosk, plain hi-vis vest folded on counter, assisting guests, warm hotel-style lighting."
 - **Industrial / Warehouse Security** – "Large UK distribution warehouse interior, security officer in plain hi-vis jacket checking manifest clipboard with warehouse supervisor, forklifts blurred, no logos, ambient white lighting."
 - **Cleaning Services** – "Commercial cleaning team in the UK wearing navy uniforms with subtle hi-vis piping, mopping and using floor scrubber in a modern office atrium, no logos, bright daylight."
-- **CCTV Installation & Monitoring** – "Dual scene: UK technicians in plain hi-vis jackets and white hard hats mounting CCTV cameras on a commercial building while a colleague monitors multi-screen control room feeds, no logos, evening city lights."
-- **CCTV Towers - Mobile Surveillance** – "Mobile CCTV tower overlooking a UK construction compound at dusk, security specialists in hi-vis jackets and hard hats reviewing live feeds on rugged tablet, no logos, cranes silhouetted."
 
 Use the same imagery (cropped appropriately) for the corresponding banner slots on each service detail page.
 
@@ -63,17 +57,9 @@ Use the same imagery (cropped appropriately) for the corresponding banner slots 
 - **Concierge Services** – "Front-of-house desk with UK concierge security in navy suit welcoming guests, modern London office interior, no logos."
 - **Industrial / Warehouse Security** – "Security officer in plain hi-vis jacket monitoring CCTV monitors inside a UK warehouse control room, forklifts blurred through window, no logos."
 - **Cleaning Services** – "Professional UK cleaning operative in navy uniform using floor scrubber in modern office atrium, sunlight reflections, no logos."
-- **CCTV Installation & Monitoring** – "UK technician in plain hi-vis jacket and white hard hat adjusting a CCTV camera on office exterior, London skyline background, no logos."
-- **CCTV Towers - Mobile Surveillance** – "Mobile CCTV tower on UK construction site with officer in hi-vis jacket and hard hat checking tablet feed, no logos."
 - **Security Services** – "Composite of UK security control room with wall of monitors, officer in plain hi-vis jacket pointing at screen, no logos."
 - **Facilities Management** – "UK facilities supervisor in navy uniform reviewing maintenance checklist in modern office plant room, plain hi-vis vest over shoulders, no logos."
 - **Cleaning Services (general)** – "Team of UK cleaners in coordinated navy uniforms sanitising open-plan office desks, daylight, no logos."
-- **CCTV Installation** – see dedicated prompt above (reuse).
-- **24/7 Monitoring** – "UK CCTV operator in control room at night, monitors glowing, wearing plain hi-vis jacket over navy polo, no logos, London skyline through window."
-- **Remote Access** – "Security manager in London office using tablet to view CCTV feeds remotely, plain hi-vis vest on chair, no logos, ambient evening lighting."
-- **Rapid Deployment CCTV** – "Crew unloading telescopic CCTV tower from trailer on UK construction site, plain hi-vis jackets and hard hats, no logos, overcast sky."
-- **Autonomous Operation** – "Solar-powered CCTV tower in remote UK site with officer in hi-vis jacket checking status dashboard on rugged laptop, no logos, dramatic clouds."
-- **360 Degree Coverage** – "Elevated view from mobile CCTV mast overlooking UK commercial yard, operator in hi-vis jacket reviewing panoramic screens, no logos."
 
 ### Team & People Portraits (1024x1792 → crop 1200x1500)
 - **Security Professional** – "Portrait of UK security supervisor in navy suit with plain hi-vis armband, standing in modern London lobby, neutral background, confident friendly expression, no logos, no hat."
@@ -102,8 +88,6 @@ Use the same imagery (cropped appropriately) for the corresponding banner slots 
 - **Contact Us** – "London reception desk with concierge security professional in navy suit guiding visitor, wide composition, plain hi-vis armband, no logos, warm lighting."
 - **Contact Us for Quote** – "Executive meeting table with UK security consultant in navy suit presenting proposal folder to client, plain hi-vis vest folded on chair, skyline backdrop, no logos."
 - **Our Policies** – reuse the hero prompt above (wider crop).
-- **CCTV Security Quote** – "Modern security operations office where UK manager in plain hi-vis jacket reviews CCTV tower proposal with client over digital tablet, no logos, equipment displayed on table."
-- **CCTV Towers Quote** – "Outdoor construction compound with mobile CCTV tower beside temporary cabin, UK security consultant in hi-vis jacket and hard hat discussing plans with client, no logos, sunset lighting."
 
 ### Blog / Miscellaneous
 - **Blog Default** (1792x1024 → crop 1600x900)
@@ -111,14 +95,12 @@ Use the same imagery (cropped appropriately) for the corresponding banner slots 
 
 ## Page-to-Prompt Map
 
-- **Home (`/`)**: Hero – Professional Security Team; Service cards – Static Guarding, Corporate Protection & Security, Immediate Response Team, Event Security, Mobile Patrols, Concierge Services, Industrial / Warehouse Security, Cleaning Services, CCTV Installation & Monitoring, CCTV Towers - Mobile Surveillance; Feature tiles – Security Professional, Expert Team, 24/7 Support, Quality Assurance; Sector strip – Corporate Buildings, Warehouse Facilities Management, Hospitals & Schools, Public Sector Facilities Management, Retail Facilities Management; Testimonials – John Smith, Sarah Johnson, Michael Brown, Emma Wilson; CTA banner – Contact Us.
-- **Services (`/services`)**: Hero – Security Services; Service grid – same ten service card prompts; CTA banner – Contact Us for Quote.
+- **Home (`/`)**: Hero – Professional Security Team; Service cards – Static Guarding, Corporate Protection & Security, Immediate Response Team, Event Security, Mobile Patrols, Concierge Services, Industrial / Warehouse Security, Cleaning Services; Feature tiles – Security Professional, Expert Team, 24/7 Support, Quality Assurance; Sector strip – Corporate Buildings, Warehouse Facilities Management, Hospitals & Schools, Public Sector Facilities Management, Retail Facilities Management; Testimonials – John Smith, Sarah Johnson, Michael Brown, Emma Wilson; CTA banner – Contact Us.
+- **Services (`/services`)**: Hero – Security Services; Service grid – same eight service card prompts; CTA banner – Contact Us for Quote.
 - **Service detail (`/services/[slug]`)**: For each service use matching hero/banner prompt from the Service Detail Heroes list (crop wide for banners).
 - **About (`/about`)**: Hero – About PGS FM Ltd Team; Mid-page banner – Professional Team; Team portraits – Security Specialist, Facilities Manager, Support Staff; CTA banner – Partner with PGS FM Ltd.
 - **Sectors (`/sectors`)**: Hero – Specialized Sectors; Sector cards – respective Sector Banners; CTA banner – Sector Consultation.
 - **Cleaning (`/cleaning`)**: Hero – Professional Cleaning Services; Process banner – Cleaning Process; CTA banner – Professional Cleaning Services (wider crop).
-- **CCTV Installation & Monitoring (`/cctv-services`)**: Hero – CCTV Security Systems; Feature cards – CCTV Installation, 24/7 Monitoring, Remote Access; CTA banner – CCTV Security Quote.
-- **CCTV Towers (`/cctv-towers`)**: Hero – CCTV Towers Mobile Surveillance; Feature cards – Rapid Deployment CCTV, Autonomous Operation, 360 Degree Coverage; CTA banner – CCTV Towers Quote.
 - **Policies (`/policies`)**: Hero – Our Policies; CTA banner – Our Policies; individual policy links use the five Policy Hero prompts on `/policies/[slug]`.
 - **Policies detail (`/policies/[slug]`)**: Match hero prompt to policy title from Policy Heroes list.
 - **Contact (`/contact`)**: Hero – Contact Us; embedded CTA banners reuse Contact Us for Quote if needed.

@@ -76,12 +76,6 @@ export default function Footer() {
               <Link href="/services" className="block text-sm text-gray-300 hover:text-white transition-colors">
                 Services
               </Link>
-              <Link href="/cctv-services" className="block text-sm text-gray-300 hover:text-white transition-colors">
-                CCTV Services
-              </Link>
-              <Link href="/cctv-towers" className="block text-sm text-gray-300 hover:text-white transition-colors">
-                CCTV Towers
-              </Link>
               <Link href="/cleaning" className="block text-sm text-gray-300 hover:text-white transition-colors">
                 Cleaning Services
               </Link>

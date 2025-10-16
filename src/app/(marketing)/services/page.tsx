@@ -5,7 +5,7 @@ import { services } from '@/lib/data';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import Image from 'next/image';
-import { Shield, Users, Clock, CheckCircle, Star, ArrowRight, Eye, Car, Calendar, Briefcase, Building, Camera, Sparkles } from 'lucide-react';
+import { Shield, Users, Clock, CheckCircle, Star, ArrowRight, Car, Calendar, Briefcase, Building, Sparkles } from 'lucide-react';
 import { getImageUrl, getBackgroundColor } from '@/lib/imagePresets';
 
 export const metadata = {
@@ -23,9 +23,7 @@ const getServiceIcon = (serviceTitle: string) => {
     'Mobile Patrols': Car,
     'Concierge Services': Users,
     'Industrial / Warehouse Security': Building,
-    'Cleaning Services': Sparkles,
-    'CCTV Installation & Monitoring': Camera,
-    'CCTV Towers - Mobile Surveillance': Eye
+    'Cleaning Services': Sparkles
   };
   
   return iconMap[serviceTitle] || Shield;

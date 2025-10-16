@@ -3,6 +3,7 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   // Static site generation configuration
   output: 'export',
+  distDir: 'dist',
   trailingSlash: true,
   skipTrailingSlashRedirect: true,
   

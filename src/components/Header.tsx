@@ -9,7 +9,6 @@ import { navigation, services, sectors } from '@/lib/data';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isCCTVDropdownOpen, setIsCCTVDropdownOpen] = useState(false);
   const [isServicesDropdownOpen, setIsServicesDropdownOpen] = useState(false);
 
   return (
@@ -118,38 +117,6 @@ export default function Header() {
                       </div>
                     )}
                   </div>
-                ) : item.name === 'CCTV' ? (
-                  <div
-                    className="relative px-4 py-2 text-gray-700 hover:text-green-600 font-medium transition-all duration-200 rounded-lg hover:bg-green-50 group cursor-pointer flex items-center"
-                    onMouseEnter={() => setIsCCTVDropdownOpen(true)}
-                    onMouseLeave={() => setIsCCTVDropdownOpen(false)}
-                  >
-                    {item.name}
-                    <ChevronDown className="w-4 h-4 ml-1" />
-                    <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-green-600 transition-all duration-200 group-hover:w-full"></span>
-                    
-                    {/* CCTV Dropdown */}
-                    {isCCTVDropdownOpen && (
-                      <div 
-                        className="absolute top-full left-0 mt-1 w-48 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50"
-                        onMouseEnter={() => setIsCCTVDropdownOpen(true)}
-                        onMouseLeave={() => setIsCCTVDropdownOpen(false)}
-                      >
-                        <Link
-                          href="/cctv-services"
-                          className="block px-4 py-2 text-sm text-gray-700 hover:bg-green-50 hover:text-green-600 transition-colors"
-                        >
-                          CCTV Installation & Monitoring
-                        </Link>
-                        <Link
-                          href="/cctv-towers"
-                          className="block px-4 py-2 text-sm text-gray-700 hover:bg-green-50 hover:text-green-600 transition-colors"
-                        >
-                          CCTV Towers - Mobile Surveillance
-                        </Link>
-                      </div>
-                    )}
-                  </div>
                 ) : (
                   <Link
                     href={item.href}
@@ -243,29 +210,6 @@ export default function Header() {
                             </Link>
                           </div>
                         </div>
-                      </div>
-                    </div>
-                  ) : item.name === 'CCTV' ? (
-                    <div className="px-4 py-3 text-gray-700 font-medium">
-                      <div className="flex items-center justify-between">
-                        <span>CCTV Services</span>
-                        <ChevronDown className="w-4 h-4" />
-                      </div>
-                      <div className="ml-4 mt-2 space-y-1">
-                        <Link
-                          href="/cctv-services"
-                          className="block py-2 text-sm text-gray-600 hover:text-green-600 transition-colors"
-                          onClick={() => setIsMenuOpen(false)}
-                        >
-                          CCTV Installation & Monitoring
-                        </Link>
-                        <Link
-                          href="/cctv-towers"
-                          className="block py-2 text-sm text-gray-600 hover:text-green-600 transition-colors"
-                          onClick={() => setIsMenuOpen(false)}
-                        >
-                          CCTV Towers - Mobile Surveillance
-                        </Link>
                       </div>
                     </div>
                   ) : (
